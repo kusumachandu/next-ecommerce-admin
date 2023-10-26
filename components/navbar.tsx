@@ -1,5 +1,6 @@
 import { UserButton } from '@clerk/nextjs'
 import { FC } from 'react'
+import { MainNav } from '@/components/main-nav'
 
 interface NavbarProps {
   
@@ -12,9 +13,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <div>
           This will be store switcher
         </div>
-        <div>
-          this will be the routes
-        </div>
+        <MainNav className='ml-' />
         <div className='ml-auto flex items-center space-x-4'>
           <UserButton afterSignOutUrl='/' />
         </div>
