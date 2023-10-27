@@ -1,6 +1,7 @@
 import { UserButton } from '@clerk/nextjs'
 import { FC } from 'react'
 import { MainNav } from '@/components/main-nav'
+import { StoreSwitcher } from '@/components/store-switcher'
 
 interface NavbarProps {
   
@@ -11,9 +12,9 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <div className='border-b'>
       <div className='flex h-16 items-center px-4'>
         <div>
-          This will be store switcher
+          <StoreSwitcher className='' items={[]} />
         </div>
-        <MainNav className='ml-' />
+        <MainNav className='ml-4' />
         <div className='ml-auto flex items-center space-x-4'>
           <UserButton afterSignOutUrl='/' />
         </div>
