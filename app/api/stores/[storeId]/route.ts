@@ -52,6 +52,8 @@ export async function DELETE(
   req: Request,
   {params}: {params: {storeId: string}}
 ) {
+
+  console.log(params);
   try {
     const {userId} = auth();
 
@@ -63,12 +65,16 @@ export async function DELETE(
       return new NextResponse('store id is required', { status: 400 });
     }
 
+    console.log('before delete function')
+
     const store = await prismadb.store.deleteMany({
       where: {
         id: params.storeId,
         userId
       }
     })
+
+    console.log(store);
 
     return NextResponse.json(store);
 
