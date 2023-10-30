@@ -23,8 +23,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { AlertModal } from "@/components/modals/alert-modal";
-import { Finlandica } from "next/font/google";
-import { useOrigin } from "@/hooks/use-origin";
 import ImageUpload from "@/components/ui/image-upload";
 
 const formSchema = z.object({
@@ -165,7 +163,6 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
           </Button>
         </form>
       </Form>
-      <Separator className="mt-4 mb-4" />
     </>
   );
 };
